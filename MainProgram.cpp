@@ -101,10 +101,10 @@ public:
     // If out of range, keep current GPA.
     void setGpa(double g) {
         // YOUR CODE HERE
-        if(gpa<0||gpa>4){
+        if(g<=4&&g>=0){
             gpa=g;
         }
-        return;
+        return ;
     }
 
     // ----- Task 4: String Operation -----
@@ -156,7 +156,7 @@ public:
 // Version 1: Takes two Student references, returns the one with higher GPA
 Student findBestStudent(const Student& a, const Student& b) {
     // YOUR CODE HERE
-    if(a.getGpa()>b.getGpa()){
+    if(b<a){
         return a;
     }
     return b;
@@ -167,7 +167,7 @@ Student findBestStudent(Student arr[], int size) {
     // YOUR CODE HERE
     Student re;
     for(int a=0;a<size;a++){
-        if(re.getGpa()<arr[a].getGpa()){
+        if(re<arr[a]){
             re=arr[a];
         }
     }
