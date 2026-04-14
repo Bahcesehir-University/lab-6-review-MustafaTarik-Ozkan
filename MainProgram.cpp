@@ -90,7 +90,7 @@ public:
     // Name must not be empty. If empty, keep current name.
     void setName(string n) {
         // YOUR CODE HERE
-        if(name.empty()){
+        if(!name.empty()){
             name=n;
         }
         return;
