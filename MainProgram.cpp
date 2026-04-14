@@ -115,7 +115,7 @@ public:
     string getFormattedName() const {
         // YOUR CODE HERE
         string name_=name;
-        for(int a=0;a<name_.length();a++){
+        for(size_t a=0;a<name_.length();a++){
             name_[a]=toupper(name[a]);
         }
         return name_;
@@ -165,8 +165,8 @@ Student findBestStudent(const Student& a, const Student& b) {
 // Version 2: Takes an array of Students and its size, returns the one with highest GPA
 Student findBestStudent(Student arr[], int size) {
     // YOUR CODE HERE
-    Student(re);
-    for(int a=1;a<size;a++){
+    Student re;
+    for(int a=0;a<size;a++){
         if(re.getGpa()<arr[a].getGpa()){
             re=arr[a];
         }
